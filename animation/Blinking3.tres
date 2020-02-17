@@ -1,0 +1,15 @@
+[gd_resource type="Animation" format=2]
+
+[resource]
+resource_name = "Blinking03"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.113174, -0.25, 0, 0.276899, 1.33459, 0.900691, -0.25, 0, 0.27429, -1.46492, 0.345716, -0.25, 0, 0.214214, 0.575513, 0.779365, -0.231985, -0.328592, 0.25, 0, 0.344612, -0.177317, 0.500471, 0.175952, 0.303316, 0.96641, -0.210966, -0.27804, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.4, 0.6, 0.8 )
+}

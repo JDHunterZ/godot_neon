@@ -1,0 +1,79 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://font/roboto.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scene/TextAnimation.gd" type="Script" id=2]
+[ext_resource path="res://animation/Blinking2.tres" type="Animation" id=3]
+[ext_resource path="res://animation/Blinking3.tres" type="Animation" id=4]
+
+[sub_resource type="Animation" id=1]
+resource_name = "Blinking01"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.380157, -0.25, 0, 0.25, 0, 0.941853, -0.177354, -0.716162, 0.188997, -0.92888, 0.2, -0.25, 0, 0.239621, 0.559302, 0.408242, -0.249112, 0.70212, 0.229374, 0.375151, 1, -0.226504, -0.223146, 0.251377, -0.219635, 0.201116, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.1, 0.2, 0.5, 0.7, 1 )
+}
+
+[sub_resource type="Animation" id=2]
+resource_name = "Pulse01"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 1, -0.25, 0, 0.183742, -0.375996, 0.965312, -0.23743, 0.138961, 0.22049, -0.402256, 1, -0.474482, 0.0798942, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.4, 1 )
+}
+
+[sub_resource type="Animation" id=3]
+resource_name = "Pulse02"
+loop = true
+tracks/0/type = "bezier"
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"points": PoolRealArray( 0.990038, -0.25, 0, 0.20068, -0.254785, 0.935442, -0.241248, 0.0727959, 0.295915, -0.303316, 1, -0.25, 0, 0.25, 0 ),
+"times": PoolRealArray( 0, 0.5, 1 )
+}
+
+[node name="TextAnimation" type="Control"]
+modulate = Color( 1, 1, 1, 0.939987 )
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+text = "Test"
+custom_font = ExtResource( 1 )
+text_color = Color( 1, 0, 0, 1 )
+animation_name = "Pulse02"
+
+[node name="Label" type="Label" parent="."]
+modulate = Color( 1, 1, 1, 0.6 )
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Test"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/Blinking01 = SubResource( 1 )
+anims/Blinking02 = ExtResource( 3 )
+anims/Blinking03 = ExtResource( 4 )
+anims/Pulse01 = SubResource( 2 )
+anims/Pulse02 = SubResource( 3 )
