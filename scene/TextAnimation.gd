@@ -7,8 +7,11 @@ export (Font) var custom_font = null setget set_custom_font, get_custom_font
 
 export (Color, RGB) var text_color = Color(1,1,1) setget set_text_color, get_text_color
 
-export(String, "Blinking01", "Blinking02", "Blinking03", "Pulse01", "Pulse02") var animation_name setget set_animation_name, get_animation_name
+export(String, "Stop", "Blinking01", "Blinking01_long", "Blinking02", "Blinking03", "Pulse01", "Pulse01_long", "Pulse02") var animation_name setget set_animation_name, get_animation_name
 
+#export(float, 0, 10) var animation_offset = 0 setget set_animation_offset
+
+export(float, -10, 10) var animation_speed = 1 setget set_animation_speed
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
@@ -16,6 +19,9 @@ func _ready():
 	set_custom_font(custom_font)
 	set_text_color(text_color)
 	set_animation_name(animation_name)
+	#set_animation_offset(animation_offset)
+	set_animation_speed(animation_speed)
+
 
 
 func set_text(value):
@@ -51,8 +57,24 @@ func get_text_color():
 func set_animation_name(value):
 	animation_name = value
 	if (has_node("AnimationPlayer")):
-		$AnimationPlayer.current_animation = value
+		if (value == "Stop"):
+			$AnimationPlayer.stop(true)
+		else:
+			$AnimationPlayer.current_animation = value
 
 
 func get_animation_name():
 	return $AnimationPlayer.current_animation
+
+
+#func set_animation_offset(value):
+#	animation_offset = value
+#	if (has_node("AnimationPlayer")):
+#		$AnimationPlayer.current_animation_position = value
+
+
+func set_animation_speed(value):
+	animation_speed = value
+	if (has_node("AnimationPlayer")):
+		$AnimationPlayer.playback_speed = value
+

@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scene/TextAnimation.tscn" type="PackedScene" id=1]
+[ext_resource path="res://environment/Glow.tres" type="Environment" id=2]
+
+[node name="FakeLayer" type="Node2D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = ExtResource( 2 )
+
+[node name="LayerFront" parent="." instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 1, 0.969492 )
+margin_left = 260.403
+margin_top = 249.829
+margin_right = 260.403
+margin_bottom = 249.829
+text = "Sample Layer"
+text_color = Color( 0, 0.109804, 1, 1 )
+animation_name = "Pulse01_long"
+
+[node name="LayerBack" parent="." instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 1, 0.969492 )
+margin_left = 257.355
+margin_top = 254.171
+margin_right = 257.355
+margin_bottom = 254.171
+text = "Sample Layer"
+animation_name = "Pulse01_long"
