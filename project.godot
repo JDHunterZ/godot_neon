@@ -15,9 +15,17 @@ _global_script_class_icons={
 
 [application]
 
-config/name="Logo"
-run/main_scene="res://scene_test/LogoGodot.tscn"
+config/name="godot_glow_neon"
+run/main_scene="res://scene_sample/Main.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=1920
+window/size/height=1080
+window/size/resizable=false
+window/size/test_width=1920
+window/size/test_height=1080
 
 [rendering]
 

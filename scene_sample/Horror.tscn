@@ -1,20 +1,14 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://font/lacquer_180.tres" type="DynamicFont" id=1]
-[ext_resource path="res://environment/Glow.tres" type="Environment" id=2]
 [ext_resource path="res://scene/TextAnimation.tscn" type="PackedScene" id=3]
 
 [node name="Horror" type="Node2D"]
 
-[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
-environment = ExtResource( 2 )
-
 [node name="Horror" parent="." instance=ExtResource( 3 )]
-modulate = Color( 1, 1, 1, 0.856264 )
-margin_left = 103.128
-margin_top = 26.1834
-margin_right = 103.128
-margin_bottom = 26.1834
+modulate = Color( 1, 1, 1, 0.951102 )
+margin_top = 18.75
+margin_bottom = 18.75
 rect_rotation = -5.86301
 text = "HOrrOR"
 custom_font = ExtResource( 1 )
@@ -22,11 +16,11 @@ animation_name = "Pulse01"
 animation_speed = 0.2
 
 [node name="Blood" parent="." instance=ExtResource( 3 )]
-modulate = Color( 1, 1, 1, 0.893939 )
-margin_left = 365.253
-margin_top = 168.828
-margin_right = 365.253
-margin_bottom = 168.828
+modulate = Color( 1, 1, 1, 0.863365 )
+margin_left = 765.253
+margin_top = 272.578
+margin_right = 765.253
+margin_bottom = 272.578
 rect_rotation = 0.952671
 text = "BLOOd"
 custom_font = ExtResource( 1 )
@@ -34,11 +28,11 @@ animation_name = "Pulse01"
 animation_speed = 0.08
 
 [node name="Scream" parent="." instance=ExtResource( 3 )]
-modulate = Color( 1, 1, 1, 0.856264 )
-margin_left = 128.121
-margin_top = 348.049
-margin_right = 128.121
-margin_bottom = 348.049
+modulate = Color( 1, 1, 1, 0.951102 )
+margin_left = 4.76841e-07
+margin_top = 586.75
+margin_right = 4.76841e-07
+margin_bottom = 586.75
 rect_rotation = -0.549185
 text = "SCREAM"
 custom_font = ExtResource( 1 )

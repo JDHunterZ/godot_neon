@@ -1,0 +1,30 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://scene/TextAnimation.tscn" type="PackedScene" id=1]
+[ext_resource path="res://font/LeagueScript_300.tres" type="DynamicFont" id=3]
+
+[node name="NeonOpen" type="Node2D"]
+
+[node name="Open_pen" parent="." instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 1, 0.996771 )
+margin_left = 712.437
+margin_top = 306.062
+margin_right = 712.437
+margin_bottom = 306.062
+text = "pen"
+custom_font = ExtResource( 3 )
+text_color = Color( 0.305882, 0.631373, 0.121569, 1 )
+animation_name = "Pulse01"
+animation_speed = 2.663
+
+[node name="Open_O" parent="." instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 1, 0.343169 )
+margin_left = 485.312
+margin_top = 298.062
+margin_right = 485.312
+margin_bottom = 298.062
+text = "0"
+custom_font = ExtResource( 3 )
+text_color = Color( 0.784314, 0, 1, 1 )
+animation_name = "Blinking03"
+animation_speed = 0.125
