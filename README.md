@@ -1,12 +1,12 @@
-#godot_neon
+# godot_neon
 glow and animated neon effect
 
 ![Title](https://github.com/JDHunterZ/godot_neon/blob/master/_media/20200217_screen.png?raw=true "Title")
 
 
-#Solution
+# Solution
 
-##Glowing:
+## Glowing:
 For the glowing effect i use the WorldEnvironment (on "Main.tscn")
 
 see:
@@ -18,14 +18,14 @@ properties: (a few important settings)
  "Blend Mode.Screen"
 
 
-##Animation:
+## Animation:
 For blinking animation i used the AnimationPlayer and manipulate the CanvasItem.Modulate.a (Alpha) of the current node
 
 see:
  "\animation\..."
 
 
-##Simple use:
+## Simple use:
 I have created a text animation node that allows you to easily use neon-effect labels that are animated
 
 see:
@@ -39,12 +39,13 @@ properties:
  "Animation Name"
  "Animation Speed"
 
-#Sample
+# Sample
 start "\scene_sample\Main.tscn"
 use "SPACE"-key to load the next sample scene
 use "ESC"-key to exit
 
 
+## Remark
 
 has inspired me to (thanks)
 https://www.reddit.com/r/godot/comments/f1eua2/my_own_startup_logo_1920x1080_link_in_the_comment/
