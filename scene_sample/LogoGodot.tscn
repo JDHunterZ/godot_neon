@@ -1,25 +1,29 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://sprite/godot_icon.svg" type="Texture" id=3]
 [ext_resource path="res://scene/TextAnimation.tscn" type="PackedScene" id=4]
 
+[sub_resource type="CanvasItemMaterial" id=1]
+blend_mode = 2
+
 [node name="LogoGodot" type="Node2D"]
 
 [node name="godot_icon" type="Sprite" parent="."]
-position = Vector2( 896, 344.029 )
-scale = Vector2( 0.5, 0.5 )
+material = SubResource( 1 )
+position = Vector2( 896, 318.706 )
+scale = Vector2( 0.4, 0.4 )
 texture = ExtResource( 3 )
 
 [node name="NodeGodot" type="Node2D" parent="."]
-position = Vector2( 256, 688.029 )
+position = Vector2( 256, 654.264 )
 
 [node name="Letter_G" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.906488 )
+modulate = Color( 1, 1, 1, 0.621972 )
 text = "G"
 animation_name = "Pulse01_long"
 
 [node name="Letter_o" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.994834 )
+modulate = Color( 1, 1, 1, 0.846947 )
 margin_left = 152.0
 margin_right = 152.0
 text = "o"
@@ -28,7 +32,7 @@ animation_name = "Pulse01"
 animation_speed = 1.525
 
 [node name="Letter_d" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.542625 )
+modulate = Color( 1, 1, 1, 0.437174 )
 margin_left = 280.0
 margin_right = 280.0
 text = "d"
@@ -37,7 +41,7 @@ animation_name = "Blinking01"
 animation_speed = 0.081
 
 [node name="Letter_o2" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.909775 )
+modulate = Color( 1, 1, 1, 0.813273 )
 margin_left = 400.0
 margin_right = 400.0
 text = "o"
@@ -46,7 +50,7 @@ animation_name = "Pulse01"
 animation_speed = -0.618
 
 [node name="Letter_t" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.751817 )
+modulate = Color( 1, 1, 1, 0.959314 )
 margin_left = 625.323
 margin_top = 69.9405
 margin_right = 625.323
@@ -58,16 +62,16 @@ animation_name = "Blinking03"
 animation_speed = 2.401
 
 [node name="NodeEngine" type="Node2D" parent="."]
-position = Vector2( 984, 688.029 )
+position = Vector2( 984, 654.264 )
 
 [node name="Letter_E" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.890008 )
+modulate = Color( 1, 1, 1, 0.993345 )
 text = "E"
 text_color = Color( 0.360784, 1, 0, 1 )
 animation_name = "Pulse02"
 
 [node name="Letter_n" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.890008 )
+modulate = Color( 1, 1, 1, 0.993345 )
 margin_left = 128.0
 margin_right = 128.0
 text = "n"
@@ -75,7 +79,7 @@ text_color = Color( 0.360784, 1, 0, 1 )
 animation_name = "Pulse02"
 
 [node name="Letter_g" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.996003 )
+modulate = Color( 1, 1, 1, 1.00689 )
 margin_left = 248.0
 margin_right = 248.0
 text = "g"
@@ -83,7 +87,7 @@ text_color = Color( 0.360784, 1, 0, 1 )
 animation_name = "Pulse01"
 
 [node name="Letter_i" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.996003 )
+modulate = Color( 1, 1, 1, 1.00689 )
 margin_left = 368.0
 margin_right = 368.0
 text = "i"
@@ -91,7 +95,7 @@ text_color = Color( 0.360784, 1, 0, 1 )
 animation_name = "Pulse01"
 
 [node name="Letter_n2" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.890008 )
+modulate = Color( 1, 1, 1, 0.993345 )
 margin_left = 400.0
 margin_right = 400.0
 text = "n"
@@ -99,7 +103,7 @@ text_color = Color( 0.360784, 1, 0, 1 )
 animation_name = "Pulse02"
 
 [node name="Letter_e" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.908375 )
+modulate = Color( 1, 1, 1, 0.924989 )
 margin_left = 528.0
 margin_right = 528.0
 text = "e"
