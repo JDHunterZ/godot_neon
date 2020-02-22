@@ -1,3 +1,8 @@
+#godot_neon
+glow and animated neon effect
+
+![Title](https://github.com/JDHunterZ/godot_neon/blob/master/_media/20200217_screen.png?raw=true "Title")
+
 
 #Solution
 
@@ -40,7 +45,7 @@ use "SPACE"-key to load the next sample scene
 use "ESC"-key to exit
 
 
-#Remark
+
 has inspired me to (thanks)
 https://www.reddit.com/r/godot/comments/f1eua2/my_own_startup_logo_1920x1080_link_in_the_comment/
 
