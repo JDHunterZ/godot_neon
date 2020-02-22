@@ -10,7 +10,7 @@ glow and animated neon effect
 For the glowing effect i use the WorldEnvironment (on "Main.tscn")
 
 see:
- "\enviroment\Glow_1920.tres"
+ "\environment\Glow_1920.tres"
  
 properties: (a few important settings)
  "Background.Mode=Canvas"
