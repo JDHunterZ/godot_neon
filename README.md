@@ -10,39 +10,39 @@ glow and animated neon effect
 For the glowing effect i use the WorldEnvironment (on "Main.tscn")
 
 see:
- "\environment\Glow_1920.tres"
+* "\environment\Glow_1920.tres"
  
 properties: (a few important settings)
- "Background.Mode=Canvas"
- "Glow.Enabled=True"
- "Blend Mode.Screen"
+* "Background.Mode=Canvas"
+* "Glow.Enabled=True"
+* "Blend Mode.Screen"
 
 
 ## Animation:
 For blinking animation i used the AnimationPlayer and manipulate the CanvasItem.Modulate.a (Alpha) of the current node
 
 see:
- "\animation\..."
+* "\animation\..."
 
 
 ## Simple use:
 I have created a text animation node that allows you to easily use neon-effect labels that are animated
 
 see:
- "\scene\TextAnimation.gd"
- "\scene\TextAnimation.gd"
+* "\scene\TextAnimation.gd"
+* "\scene\TextAnimation.gd"
 
 properties:
- "Text"
- "Custom Font"
- "Text Color" 
- "Animation Name"
- "Animation Speed"
+* "Text"
+* "Custom Font"
+* "Text Color" 
+* "Animation Name"
+* "Animation Speed"
 
 # Sample
-start "\scene_sample\Main.tscn"
-use "SPACE"-key to load the next sample scene
-use "ESC"-key to exit
+* start "\scene_sample\Main.tscn"
+* use "SPACE"-key to load the next sample scene
+* use "ESC"-key to exit
 
 
 ## Remark
