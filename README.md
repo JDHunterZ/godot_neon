@@ -1,9 +1,9 @@
 # godot_neon
 glow and animated neon effect
 
-![Title](https://github.com/JDHunterZ/godot_neon/blob/master/_media/20200222_screen.png?raw=true "Title")
+![Title](https://github.com/JDHunterZ/godot_neon/blob/master/_media/20200224_screen.png?raw=true "Title")
 
-
+[![Samples Youtube](https://img.youtube.com/vi/Ly3TmzHI7ss/0.jpg)](https://www.youtube.com/watch?v=Ly3TmzHI7ss)
 # Solution
 
 ## Glowing:
