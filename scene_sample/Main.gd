@@ -1,4 +1,4 @@
-extends Node
+extends Node2D
 
 var currentScene = null
 var currentSceneIndex : int = -1
