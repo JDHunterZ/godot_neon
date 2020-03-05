@@ -41,6 +41,8 @@ properties:
 * "Animation Name"
 * "Animation Speed"
 
+[![How to Use -> Youtube](https://img.youtube.com/vi/Jnwkefrw9TY/0.jpg)](https://www.youtube.com/watch?v=Jnwkefrw9TY)
+
 # Sample
 * start "\scene_sample\Main.tscn"
 * use "SPACE"-key to load the next sample scene
