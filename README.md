@@ -41,6 +41,7 @@ properties:
 * "Animation Name"
 * "Animation Speed"
 
+### How to use: (Youtube)
 [![How to Use -> Youtube](https://img.youtube.com/vi/Jnwkefrw9TY/0.jpg)](https://www.youtube.com/watch?v=Jnwkefrw9TY)
 
 # Sample
