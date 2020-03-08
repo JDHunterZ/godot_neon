@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<project version="2">
+	<pipeline>
+		<pass name="canvas_item" type="plugin" plugin="GodotShaders" itemtype="GCanvasMaterial">
+			<items>
+				<item name="logo" type="plugin" plugin="GodotShaders" itemtype="GSprite">
+					<data>
+						<texture>..\icon.png</texture>
+						<width>80</width>
+						<height>80</height>
+						<x>150</x>
+						<y>200</y>
+						<rotation>0</rotation>
+						<fliph>false</fliph>
+						<flipv>false</flipv>
+						<visible>true</visible>
+						<color_r>1</color_r>
+						<color_g>1</color_g>
+						<color_b>1</color_b>
+						<color_a>1</color_a>
+					</data>
+				</item>
+			</items>
+			<data>
+				<path>shaders\canvas_item.glsl</path>
+				<uniforms>
+					<uniform name="blur" type="float">
+						<value>0.5</value>
+					</uniform>
+				</uniforms>
+			</data>
+		</pass>
+	</pipeline>
+	<objects>
+		<object type="texture" path="..\icon.png">
+			<bind slot="0" name="canvas_item" />
+		</object>
+	</objects>
+	<cameras />
+	<settings>
+		<entry type="property" name="logo" item="pipe" />
+		<entry type="file" name="canvas_item" shader="cs" />
+		<entry type="camera" fp="false">
+			<distance>4</distance>
+			<pitch>28</pitch>
+			<yaw>317</yaw>
+			<roll>360</roll>
+		</entry>
+		<entry type="clearcolor" r="0" g="0" b="0" a="0" />
+		<entry type="usealpha" val="false" />
+	</settings>
+	<plugins>
+		<entry name="GodotShaders" ver="1" />
+	</plugins>
+</project>

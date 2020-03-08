@@ -1,0 +1,64 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://font/roboto_80.tres" type="DynamicFont" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://shader/blur.shader" type="Shader" id=3]
+
+[sub_resource type="ShaderMaterial" id=3]
+shader = ExtResource( 3 )
+shader_param/iResolution = null
+shader_param/direction = null
+
+[sub_resource type="CanvasItemMaterial" id=4]
+next_pass = SubResource( 3 )
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 3 )
+shader_param/iResolution = null
+shader_param/direction = null
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label2" type="Label" parent="."]
+use_parent_material = true
+margin_left = -45.2093
+margin_top = -53.292
+margin_right = 1013.79
+margin_bottom = 240.708
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0.635294, 0, 0, 1 )
+text = "gfhfghfgh"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+material = SubResource( 4 )
+margin_left = -289.514
+margin_top = 427.831
+margin_right = 1322.49
+margin_bottom = 721.831
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 1, 0, 0, 1 )
+text = "Very Long Text"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+material = SubResource( 2 )
+margin_left = 31.3676
+margin_top = 77.8403
+margin_right = 926.368
+margin_bottom = 618.84
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color( 0.294118, 0.807843, 0.168627, 1 )
