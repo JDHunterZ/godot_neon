@@ -5,20 +5,32 @@
 [node name="FakeLayer" type="Node2D"]
 
 [node name="LayerFront" parent="." instance=ExtResource( 1 )]
-modulate = Color( 1, 1, 1, 0.8853 )
+modulate = Color( 1, 1, 1, 0.824449 )
 margin_left = 218.66
 margin_top = 359.787
 margin_right = 218.66
 margin_bottom = 359.787
+rect_scale = Vector2( 0.24, 0.279999 )
 text = "Sample Layer"
-text_color = Color( 0, 0.109804, 1, 1 )
+text_color = Color( 0, 0.5, 2, 1 )
+animation_name = "Pulse01_long"
+
+[node name="LayerFront2" parent="." instance=ExtResource( 1 )]
+modulate = Color( 1, 1, 1, 0.824449 )
+margin_left = 216.99
+margin_top = 114.27
+margin_right = 216.99
+margin_bottom = 114.27
+text = "Sample Layer"
+text_color = Color( 0, 0.5, 1, 1 )
 animation_name = "Pulse01_long"
 
 [node name="LayerBack" parent="." instance=ExtResource( 1 )]
-modulate = Color( 1, 1, 1, 0.8853 )
+modulate = Color( 1, 1, 1, 0.824449 )
 margin_left = 211.539
 margin_top = 351.912
 margin_right = 211.539
 margin_bottom = 351.912
 text = "Sample Layer"
+text_color = Color( 2, 0, 0, 1 )
 animation_name = "Pulse01_long"

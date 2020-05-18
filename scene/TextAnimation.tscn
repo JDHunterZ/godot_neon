@@ -10,7 +10,7 @@
 [ext_resource path="res://animation/Blinking1_long.anim" type="Animation" id=8]
 
 [node name="TextAnimation" type="Control"]
-modulate = Color( 1, 1, 1, 0.961494 )
+modulate = Color( 2, 2, 2, 1 )
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 2 )
