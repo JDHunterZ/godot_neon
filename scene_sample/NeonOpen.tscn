@@ -1,30 +1,32 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://blddqtymvp024"]
 
-[ext_resource path="res://scene/TextAnimation.tscn" type="PackedScene" id=1]
-[ext_resource path="res://font/LeagueScript_300.tres" type="DynamicFont" id=3]
+[ext_resource type="PackedScene" uid="uid://drrg4x8cfwyvj" path="res://scene/TextAnimation.tscn" id="1"]
+[ext_resource type="FontFile" path="res://font/LeagueScript_300.tres" id="3"]
 
 [node name="NeonOpen" type="Node2D"]
 
-[node name="Open_pen" parent="." instance=ExtResource( 1 )]
-modulate = Color( 1, 1, 1, 0.996771 )
-margin_left = 712.437
-margin_top = 306.062
-margin_right = 712.437
-margin_bottom = 306.062
+[node name="Open_pen" parent="." instance=ExtResource("1")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 712.437
+offset_top = 306.062
+offset_right = 712.437
+offset_bottom = 306.062
 text = "pen"
-custom_font = ExtResource( 3 )
-text_color = Color( 0.305882, 0.631373, 0.121569, 1 )
-animation_name = "Pulse01"
-animation_speed = 2.663
-
-[node name="Open_O" parent="." instance=ExtResource( 1 )]
-modulate = Color( 1, 1, 1, 0.343169 )
-margin_left = 485.312
-margin_top = 298.062
-margin_right = 485.312
-margin_bottom = 298.062
-text = "0"
-custom_font = ExtResource( 3 )
-text_color = Color( 0.784314, 0, 1, 1 )
+custom_font = ExtResource("3")
+text_color = Color(0.306, 1.6, 0.122, 1)
+text_size = 600
 animation_name = "Blinking03"
-animation_speed = 0.125
+animation_speed = 0.5
+
+[node name="Open_O" parent="." instance=ExtResource("1")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 429.0
+offset_top = 297.0
+offset_right = 429.0
+offset_bottom = 297.0
+text = "0"
+custom_font = ExtResource("3")
+text_color = Color(10, 0, 10, 1)
+text_size = 600
+animation_name = "Blinking03"
+animation_speed = 2.0

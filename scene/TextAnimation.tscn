@@ -1,42 +1,84 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=12 format=3 uid="uid://drrg4x8cfwyvj"]
 
-[ext_resource path="res://font/roboto_80.tres" type="DynamicFont" id=1]
-[ext_resource path="res://scene/TextAnimation.gd" type="Script" id=2]
-[ext_resource path="res://animation/Blinking3.anim" type="Animation" id=3]
-[ext_resource path="res://animation/Pulse02.anim" type="Animation" id=4]
-[ext_resource path="res://animation/Blinking2.anim" type="Animation" id=5]
-[ext_resource path="res://animation/Pulse01.anim" type="Animation" id=6]
-[ext_resource path="res://animation/Blinking1.anim" type="Animation" id=7]
-[ext_resource path="res://animation/Blinking1_long.anim" type="Animation" id=8]
+[ext_resource type="FontFile" uid="uid://bmi3w4q4htmmt" path="res://font/roboto_80.tres" id="1"]
+[ext_resource type="Script" path="res://scene/TextAnimation.gd" id="2"]
+[ext_resource type="Animation" uid="uid://dm8fexc5a0whc" path="res://animation/Blinking3.anim" id="3"]
+[ext_resource type="Animation" uid="uid://dv462bicmsr0p" path="res://animation/Pulse02.anim" id="4"]
+[ext_resource type="Animation" uid="uid://dbmqsncsvg02w" path="res://animation/Blinking2.anim" id="5"]
+[ext_resource type="Animation" uid="uid://b8w8x8pmpmxa6" path="res://animation/Pulse01.anim" id="6"]
+[ext_resource type="Animation" uid="uid://bsj3qh1v6lwfq" path="res://animation/Blinking1.anim" id="7"]
+[ext_resource type="Animation" uid="uid://depswi4oe4372" path="res://animation/Blinking1_long.anim" id="8"]
+
+[sub_resource type="Animation" id="Animation_gp8mr"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_sjc3b"]
+resource_name = "Stop"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:modulate:a")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_o3a5j"]
+_data = {
+"Blinking01": ExtResource("7"),
+"Blinking01_long": ExtResource("8"),
+"Blinking02": ExtResource("5"),
+"Blinking03": ExtResource("3"),
+"Pulse01": ExtResource("6"),
+"Pulse01_long": ExtResource("8"),
+"Pulse02": ExtResource("4"),
+"RESET": SubResource("Animation_gp8mr"),
+"Stop": SubResource("Animation_sjc3b")
+}
 
 [node name="TextAnimation" type="Control"]
-modulate = Color( 2, 2, 2, 1 )
+modulate = Color(2, 2, 2, 0)
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-script = ExtResource( 2 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2")
 text = "Sample"
-custom_font = ExtResource( 1 )
-text_color = Color( 1, 0, 0, 1 )
+custom_font = ExtResource("1")
+text_color = Color(1, 0, 0, 1)
+text_size = 56
+animation_name = "Pulse01"
 
 [node name="Label" type="Label" parent="."]
-modulate = Color( 1, 1, 1, 0.6 )
-margin_right = 40.0
-margin_bottom = 14.0
-custom_fonts/font = ExtResource( 1 )
-custom_colors/font_color = Color( 1, 0, 0, 1 )
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.6)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 14.0
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_fonts/font = ExtResource("1")
+theme_override_font_sizes/font_size = 56
 text = "Sample"
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
-anims/Blinking01 = ExtResource( 7 )
-anims/Blinking01_long = ExtResource( 8 )
-anims/Blinking02 = ExtResource( 5 )
-anims/Blinking03 = ExtResource( 3 )
-anims/Pulse01 = ExtResource( 6 )
-anims/Pulse01_long = ExtResource( 8 )
-anims/Pulse02 = ExtResource( 4 )
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_o3a5j")
+}

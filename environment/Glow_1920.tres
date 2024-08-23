@@ -1,15 +1,18 @@
-[gd_resource type="Environment" format=2]
+[gd_resource type="Environment" format=3 uid="uid://cyxpgcrxfpj6w"]
 
 [resource]
 background_mode = 4
+ambient_light_source = 2
 tonemap_mode = 2
+ssr_enabled = true
+ssao_enabled = true
+ssil_enabled = true
 glow_enabled = true
-glow_levels/1 = true
-glow_levels/3 = false
-glow_levels/4 = true
-glow_levels/6 = true
+glow_levels/1 = 1.0
+glow_levels/3 = 0.0
+glow_levels/4 = 1.0
+glow_levels/6 = 1.0
 glow_intensity = 8.0
 glow_strength = 0.76
 glow_bloom = 0.54
 glow_blend_mode = 0
-glow_bicubic_upscale = true

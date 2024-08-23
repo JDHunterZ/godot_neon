@@ -20,19 +20,19 @@ vec4 blur13(sampler2D image, vec2 uv, vec2 resolution, vec2 dir) {
 	return color;
 }
 
-void fragment() 
+void fragment()
 {
 	//vec4 color = texture(SCREEN_TEXTURE, SCREEN_UV, 3.0);
-	
+
 	//vec4 color = texture(TEXTURE, UV, 3.0);
 	//COLOR = color; // vec4(0.0, 1.0, 1.0, 0.5);
 	//COLOR.g = UV.x;
 	//COLOR.a = texture(TEXTURE, UV).a;
-	
+
 	//vec4 color = texture(TEXTURE, UV) * 2.5;
 	//float gray_value = (color.r + color.g + color.b) / 3.0;
 	//COLOR.rgb = vec3(gray_value);
-	
+
 	vec2 uv = UV / iResolution.xy;
 	COLOR = blur13(iChannel0, uv, iResolution.xy, direction);
 }
@@ -44,4 +44,3 @@ void grey()
 	//float gray_value = (color.r + color.g + color.b) / 3.0
 	//COLOR.rgb = vec3(gray_value);
 }
-

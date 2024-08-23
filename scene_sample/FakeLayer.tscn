@@ -1,36 +1,27 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://dk8bceju2b7x6"]
 
-[ext_resource path="res://scene/TextAnimation.tscn" type="PackedScene" id=1]
+[ext_resource type="PackedScene" uid="uid://drrg4x8cfwyvj" path="res://scene/TextAnimation.tscn" id="1"]
 
 [node name="FakeLayer" type="Node2D"]
 
-[node name="LayerFront" parent="." instance=ExtResource( 1 )]
-modulate = Color( 1, 1, 1, 0.824449 )
-margin_left = 218.66
-margin_top = 359.787
-margin_right = 218.66
-margin_bottom = 359.787
-rect_scale = Vector2( 0.24, 0.279999 )
+[node name="LayerFront" parent="." instance=ExtResource("1")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 219.0
+offset_top = 234.0
+offset_right = 219.0
+offset_bottom = 234.0
 text = "Sample Layer"
-text_color = Color( 0, 0.5, 2, 1 )
+text_color = Color(0, 2, 10, 1)
+text_size = 250
 animation_name = "Pulse01_long"
 
-[node name="LayerFront2" parent="." instance=ExtResource( 1 )]
-modulate = Color( 1, 1, 1, 0.824449 )
-margin_left = 216.99
-margin_top = 114.27
-margin_right = 216.99
-margin_bottom = 114.27
+[node name="LayerBack" parent="." instance=ExtResource("1")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 215.0
+offset_top = 235.0
+offset_right = 215.0
+offset_bottom = 235.0
 text = "Sample Layer"
-text_color = Color( 0, 0.5, 1, 1 )
-animation_name = "Pulse01_long"
-
-[node name="LayerBack" parent="." instance=ExtResource( 1 )]
-modulate = Color( 1, 1, 1, 0.824449 )
-margin_left = 211.539
-margin_top = 351.912
-margin_right = 211.539
-margin_bottom = 351.912
-text = "Sample Layer"
-text_color = Color( 2, 0, 0, 1 )
+text_color = Color(10, 0, 0, 1)
+text_size = 250
 animation_name = "Pulse01_long"

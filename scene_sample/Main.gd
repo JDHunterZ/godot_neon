@@ -15,17 +15,17 @@ func _ready():
 
 
 func setWindowCenter():
-	var screen_size = OS.get_screen_size(OS.get_current_screen())
-	var window_size = OS.get_window_size()
+	var screen_size = DisplayServer.screen_get_size(get_window().get_current_screen())
+	var window_size = get_window().get_size()
 	var centered_pos = (screen_size - window_size) / 2
-	OS.set_window_position(centered_pos)
+	get_window().set_position(centered_pos)
 
 
 func createScene(index : int):
 	if (currentScene != null):
 		currentScene.queue_free()
 	
-	currentScene = sample_scenes[index].instance() #scene_LogoGodot.instance()
+	currentScene = sample_scenes[index].instantiate() #scene_LogoGodot.instantiate()
 	add_child(currentScene)
 
 

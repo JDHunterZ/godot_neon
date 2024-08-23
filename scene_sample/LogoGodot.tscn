@@ -1,114 +1,135 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://d0b2usv2il2ni"]
 
-[ext_resource path="res://sprite/godot_icon.svg" type="Texture" id=3]
-[ext_resource path="res://scene/TextAnimation.tscn" type="PackedScene" id=4]
+[ext_resource type="Texture2D" uid="uid://bv4jb7qrovw5m" path="res://sprite/godot_icon.svg" id="3"]
+[ext_resource type="PackedScene" uid="uid://drrg4x8cfwyvj" path="res://scene/TextAnimation.tscn" id="4"]
 
 [node name="LogoGodot" type="Node2D"]
 
-[node name="godot_icon" type="Sprite" parent="."]
-position = Vector2( 896, 318.706 )
-scale = Vector2( 0.4, 0.4 )
-texture = ExtResource( 3 )
+[node name="godot_icon" type="Sprite2D" parent="."]
+position = Vector2(896, 318.706)
+scale = Vector2(0.4, 0.4)
+texture = ExtResource("3")
 
 [node name="NodeGodot" type="Node2D" parent="."]
-position = Vector2( 256, 654.264 )
+position = Vector2(256, 654.264)
 
-[node name="Letter_G" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.560661 )
+[node name="Letter_G" parent="NodeGodot" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = -120.0
+offset_top = -60.264
+offset_right = -120.0
+offset_bottom = -60.264
 text = "G"
+text_size = 300
 animation_name = "Pulse01_long"
-animation_speed = 1.0
 
-[node name="Letter_o" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.875009 )
-margin_left = 152.0
-margin_right = 152.0
+[node name="Letter_o" parent="NodeGodot" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 61.0
+offset_top = -64.264
+offset_right = 61.0
+offset_bottom = -64.264
 text = "o"
-text_color = Color( 0.360784, 1, 0, 1 )
+text_color = Color(0.360784, 1, 0, 1)
+text_size = 300
 animation_name = "Pulse01"
 animation_speed = 1.525
 
-[node name="Letter_d" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.876885 )
-margin_left = 280.0
-margin_right = 280.0
+[node name="Letter_d" parent="NodeGodot" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 198.0
+offset_top = -67.264
+offset_right = 198.0
+offset_bottom = -67.264
 text = "d"
-text_color = Color( 0.360784, 1, 0, 1 )
+text_color = Color(0.360784, 1, 0, 1)
+text_size = 300
 animation_name = "Blinking01"
 animation_speed = 0.081
 
-[node name="Letter_o2" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.934731 )
-margin_left = 400.0
-margin_right = 400.0
+[node name="Letter_o2" parent="NodeGodot" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 333.0
+offset_top = -62.264
+offset_right = 333.0
+offset_bottom = -62.264
 text = "o"
-text_color = Color( 0.360784, 1, 0, 1 )
+text_color = Color(0.360784, 1, 0, 1)
+text_size = 300
 animation_name = "Pulse01"
 animation_speed = -0.618
 
-[node name="Letter_t" parent="NodeGodot" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.96641 )
-margin_left = 625.323
-margin_top = 69.9405
-margin_right = 625.323
-margin_bottom = 69.9405
-rect_rotation = 30.0
+[node name="Letter_t" parent="NodeGodot" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 405.0
+offset_top = 209.736
+offset_right = 405.0
+offset_bottom = 209.736
+rotation = 30.0
 text = "t"
-text_color = Color( 1, 1, 1, 1 )
+text_color = Color(1, 1, 1, 1)
+text_size = 300
 animation_name = "Blinking03"
 animation_speed = 2.401
 
 [node name="NodeEngine" type="Node2D" parent="."]
-position = Vector2( 984, 654.264 )
+position = Vector2(984, 654.264)
 
-[node name="Letter_E" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.944392 )
+[node name="Letter_E" parent="NodeEngine" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = -25.0
+offset_top = -8.26398
+offset_right = -25.0
+offset_bottom = -8.26398
 text = "E"
-text_color = Color( 0.360784, 1, 0, 1 )
+text_color = Color(0.360784, 1, 0, 1)
+text_size = 300
 animation_name = "Pulse02"
-animation_speed = 1.0
 
-[node name="Letter_n" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.944392 )
-margin_left = 128.0
-margin_right = 128.0
+[node name="Letter_n" parent="NodeEngine" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 128.0
+offset_right = 128.0
 text = "n"
-text_color = Color( 0.360784, 1, 0, 1 )
+text_color = Color(0.360784, 1, 0, 1)
+text_size = 300
 animation_name = "Pulse02"
-animation_speed = 1.0
 
-[node name="Letter_g" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.86429 )
-margin_left = 248.0
-margin_right = 248.0
+[node name="Letter_g" parent="NodeEngine" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 248.0
+offset_right = 248.0
 text = "g"
-text_color = Color( 0.360784, 1, 0, 1 )
+text_color = Color(0.360784, 1, 0, 1)
+text_size = 300
 animation_name = "Pulse01"
-animation_speed = 1.0
 
-[node name="Letter_i" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.86429 )
-margin_left = 368.0
-margin_right = 368.0
+[node name="Letter_i" parent="NodeEngine" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 368.0
+offset_right = 368.0
 text = "i"
-text_color = Color( 0.360784, 1, 0, 1 )
+text_color = Color(0.360784, 1, 0, 1)
+text_size = 300
 animation_name = "Pulse01"
-animation_speed = 1.0
 
-[node name="Letter_n2" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.944392 )
-margin_left = 400.0
-margin_right = 400.0
+[node name="Letter_n2" parent="NodeEngine" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 400.0
+offset_right = 400.0
 text = "n"
-text_color = Color( 0.360784, 1, 0, 1 )
+text_color = Color(0.360784, 1, 0, 1)
+text_size = 300
 animation_name = "Pulse02"
-animation_speed = 1.0
 
-[node name="Letter_e" parent="NodeEngine" instance=ExtResource( 4 )]
-modulate = Color( 1, 1, 1, 0.838063 )
-margin_left = 528.0
-margin_right = 528.0
+[node name="Letter_e" parent="NodeEngine" instance=ExtResource("4")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 644.0
+offset_top = -13.264
+offset_right = 644.0
+offset_bottom = -13.264
 text = "e"
-text_color = Color( 0.360784, 1, 0, 1 )
+text_color = Color(0.360784, 1, 0, 1)
+text_size = 300
 animation_name = "Blinking01_long"
 animation_speed = 7.127

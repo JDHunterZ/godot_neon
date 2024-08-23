@@ -1,40 +1,45 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://cugd1kp4uswlj"]
 
-[ext_resource path="res://font/lacquer_180.tres" type="DynamicFont" id=1]
-[ext_resource path="res://scene/TextAnimation.tscn" type="PackedScene" id=3]
+[ext_resource type="FontFile" path="res://font/lacquer_180.tres" id="1"]
+[ext_resource type="PackedScene" uid="uid://drrg4x8cfwyvj" path="res://scene/TextAnimation.tscn" id="3"]
 
 [node name="Horror" type="Node2D"]
 
-[node name="Horror" parent="." instance=ExtResource( 3 )]
-modulate = Color( 1, 1, 1, 0.951102 )
-margin_top = 18.75
-margin_bottom = 18.75
-rect_rotation = -5.86301
+[node name="Horror" parent="." instance=ExtResource("3")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 73.0
+offset_top = 28.0
+offset_right = 73.0
+offset_bottom = 28.0
+rotation = -6.18492
 text = "HOrrOR"
-custom_font = ExtResource( 1 )
+custom_font = ExtResource("1")
+text_size = 301
 animation_name = "Pulse01"
-animation_speed = 0.2
+animation_speed = 0.5
 
-[node name="Blood" parent="." instance=ExtResource( 3 )]
-modulate = Color( 1, 1, 1, 0.863365 )
-margin_left = 765.253
-margin_top = 272.578
-margin_right = 765.253
-margin_bottom = 272.578
-rect_rotation = 0.952671
+[node name="Blood" parent="." instance=ExtResource("3")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 1247.0
+offset_top = 418.0
+offset_right = 1247.0
+offset_bottom = 418.0
+rotation = 0.0934645
 text = "BLOOd"
-custom_font = ExtResource( 1 )
+custom_font = ExtResource("1")
+text_size = 216
 animation_name = "Pulse01"
-animation_speed = 0.08
+animation_speed = 0.3
 
-[node name="Scream" parent="." instance=ExtResource( 3 )]
-modulate = Color( 1, 1, 1, 0.951102 )
-margin_left = 4.76841e-07
-margin_top = 586.75
-margin_right = 4.76841e-07
-margin_bottom = 586.75
-rect_rotation = -0.549185
+[node name="Scream" parent="." instance=ExtResource("3")]
+modulate = Color(1, 1, 1, 0)
+offset_left = 418.0
+offset_top = 537.0
+offset_right = 418.0
+offset_bottom = 537.0
+rotation = 0.14881
 text = "SCREAM"
-custom_font = ExtResource( 1 )
+custom_font = ExtResource("1")
+text_size = 271
 animation_name = "Pulse01"
-animation_speed = 0.2
+animation_speed = 0.1
